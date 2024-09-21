@@ -1,0 +1,33 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Georgia', serif; /* Fancier font */
+}
+
+.full-image {
+    background-image: url('images/lyric01.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-text {
+    background-color: purple; /* Purple background */
+    color: white; /* White text */
+    padding: 40px;
+    font-size: 36px; /* Larger text */
+    font-weight: bold; /* Bold text */
+    border-radius: 10px;
+    text-align: center;
+}
