@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Click to Change Text</title>
+    <style>
+        /* Set the page to take up the entire screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fullscreen image */
+        .fullscreen-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Textbox in the lower third of the screen */
+        .textbox {
+            position: absolute;
+            bottom: 10%;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5em;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <!-- Fullscreen image -->
+    <img src="images/image.jpeg" class="fullscreen-image" alt="Full Screen Background" id="image">
+
+    <!-- Textbox for displaying sentences -->
+    <div class="textbox" id="textBox">
+        Click the image to change the text!
+    </div>
+
+    <script>
+        // Array of sentences
+        const sentences = [
+            "The flight back home from LA after seeing my favorite group live",
+            "A beautiful sunset to complete a beautiful weekend",
+            "Flying used to be scary",
+            "Each day is a new adventure waiting to unfold.",
+            "Embrace the serenity of the present."
+        ];
+
+        let index = 0;
+
+        // Change text when the image is clicked
+        document.getElementById('image').addEventListener('click', function() {
+            index = (index + 1) % sentences.length;
+            document.getElementById('textBox').innerHTML = sentences[index];
+        });
+    </script>
+</body>
+</html>
+
