@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+}
+
+body {
+    margin: 0; /* Removes default margin */
+    font-family: Arial, sans-serif; /* Sets font family */
+    background: radial-gradient(circle, #ffffff, #ffcccc); /* Gradient background from white to pink */
+    overflow-y: scroll; /* Enables vertical scrolling */
+    height: 100vh; /* Full viewport height */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+.gradient-background {
+    position: fixed; /* Fixed position to cover the entire background */
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    z-index: -1; /* Ensure the background is behind other elements */
+}
+
+.image-container {
+    position: fixed; /* Fixed position for the image container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to perfect center */
+    width: 800px; /* Set width for the image */
+    height: 800px; /* Set height for the image */
+    background-size: cover; /* Cover the entire area with the image */
+    background-position: center; /* Center the background image */
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.5s ease; /* Fading transition for opacity */
+}
+
+.text-container {
+    position: relative; /* Relative positioning for text boxes */
+    z-index: 1; /* Bring text above the background */
+    margin-top: 50vh; /* Start text container below the midpoint of the viewport */
+    text-align: center; /* Center text inside the container */
+}
+
+.text-box {
+    background-color: transparent; /* Make background transparent */
+    padding: 20px; /* Padding inside text boxes */
+    margin: 20px 0; /* Space between text boxes */
+    font-size: 1.5em; /* Font size for text */
+    font-weight: bold; /* Make text bold */
+    font-style: italic; /* Make text italic */
+    color: black; /* Text color */
+    text-shadow: 
+        1px 1px 0 white,   /* Right bottom */
+        -1px -1px 0 white, /* Left top */
+        -1px 1px 0 white,  /* Left bottom */
+        1px -1px 0 white;  /* Right top */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Fade-in effect for text boxes */
+}
+
+.text-box.active {
+    opacity: 1; /* Show the active text box */
+}
+
+/* Adjusting the lower thirds */
+.text-box:nth-child(n+7) {
+    margin-top: 60vh; /* Move lower third text boxes down */
+}
