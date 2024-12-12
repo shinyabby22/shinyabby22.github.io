@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Video Toggle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Full-screen video container with an overlay text box -->
+  <div class="video-container">
+    <!-- Video element with the initial video source -->
+    <video id="videoPlayer" autoplay muted loop src="videos/video01.mp4"></video>
+    <!-- Clickable text box to toggle videos randomly -->
+    <div class="text-box" onclick="toggleRandomVideo()">
+      "time passes by; the moon changes with phases"
+    </div>
+  </div>
+
+  <!-- External JavaScript file for functionality -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+/* Reset and basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0; /* Remove default body margin */
+}
+
+/* Full-screen container for video */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black; /* Added black background */
+  overflow: hidden;
+}
+
+/* Styling for the video element */
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+/* Lower-third text box styling */
+.text-box {
+    position: absolute;
+    top: 93%; /* Moves the text box slightly up */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text box */
+    background-color: #323232; 
+    color: #000000; /* Black text */
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.0em;
+    text-align: center;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for added depth */
+}
+</style>
+
