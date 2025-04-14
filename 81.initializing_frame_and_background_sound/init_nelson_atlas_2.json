@@ -1,0 +1,19 @@
+﻿{"frames": {
+
+"CachedBmp_1":
+{
+	"frame": {"x":0,"y":0,"w":1806,"h":231},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1806,"h":231},
+	"sourceSize": {"w":1806,"h":231}
+}},
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.7.61",
+	"image": "init_nelson_atlas_2.png",
+	"format": "undefined",
+	"size": {"w":2048,"h":256},
+	"scale": "1"
+}
+}
